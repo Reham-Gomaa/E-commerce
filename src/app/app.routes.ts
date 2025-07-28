@@ -2,7 +2,7 @@ import { Routes } from '@angular/router';
 import { ProductsComponent } from './features/pages/products/products.component';
 
 export const routes: Routes = [
-  { path: '', redirectTo: 'products', pathMatch: 'full' },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: ProductsComponent, title: 'Home' },
   {
     path: 'details/:p_id',

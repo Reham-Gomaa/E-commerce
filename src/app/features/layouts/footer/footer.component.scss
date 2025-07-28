@@ -1,0 +1,19 @@
+.footer-bg {
+  background-color: var(--footer-color);
+}
+
+.payments {
+  @media all and (48rem <= width <= 55.875rem) {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    align-items: start !important;
+  }
+
+  @media all and (min-width: 55.875rem) {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+  }
+}
