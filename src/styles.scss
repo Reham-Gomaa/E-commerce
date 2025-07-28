@@ -1,3 +1,6 @@
+@use "./app/shared/styles/variables" as vars;
+@use "./app/shared/styles/utilities" as utils;
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

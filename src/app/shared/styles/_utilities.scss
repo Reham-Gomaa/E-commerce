@@ -1,0 +1,33 @@
+@use "./variables";
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+  inset: 0;
+}
+
+body {
+  font-family: var(--font-family-1);
+}
+.mycontainer {
+  @apply w-[95%] sm:w-[90%] lg:w-[85%] mx-auto;
+}
+.active-text {
+  color: var(--active-color);
+}
+.btn-text {
+  color: var(--btn-color);
+}
+.btn-bg {
+  background-color: var(--btn-color);
+}
+
+.footer-bg {
+  background-color: var(--footer-color);
+}
