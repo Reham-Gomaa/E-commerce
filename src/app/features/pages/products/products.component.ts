@@ -10,16 +10,19 @@ import { ProductsCarouselComponent } from '../../../shared/components/UI/product
 import { SearchPipe } from '../../../shared/pipes/search.pipe';
 import { SearchByNameComponent } from '../../../shared/components/business/search-by-name/search-by-name.component';
 import { finalize } from 'rxjs';
+import { SortComponent } from '../../../shared/components/business/sort/sort.component';
+import { SortPipe } from '../../../shared/pipes/sort.pipe';
 
 @Component({
   selector: 'app-products',
   imports: [
     CurrencyPipe,
     SearchPipe,
-
+    SortPipe,
     RouterLink,
     ProductsCarouselComponent,
     SearchByNameComponent,
+    SortComponent,
   ],
   templateUrl: './products.component.html',
   styleUrl: './products.component.scss',
@@ -30,6 +33,7 @@ export class ProductsComponent implements OnInit {
   readonly productsService = inject(ProductsService);
 
   searchKey: string = '';
+  currentSort: string = '';
 
   ngOnInit(): void {
     this.getAllProducts();
@@ -44,6 +48,10 @@ export class ProductsComponent implements OnInit {
           this.productsService.allProducts = res;
         },
       });
+  }
+
+  sortProducts(sortType: string) {
+    this.currentSort = sortType;
   }
 
   navigateToDetails(productId: number) {

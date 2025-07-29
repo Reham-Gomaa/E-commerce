@@ -1,7 +1,10 @@
 @if (productsService.allProducts!= null) {
 <section class="p-4 my-7" aria-label="Products listing">
     <div class="mycontainer">
-        <app-search-by-name (key)="searchKey = $event" />
+        <div class="flex justify-between items-center">
+            <app-search-by-name (key)="searchKey = $event" />
+            <!-- <app-sort (sortChange)="sortProducts($event)" /> -->
+        </div>
 
         <div class="my-14" aria-label="Featured products">
             <app-products-carousel />
@@ -9,7 +12,7 @@
 
         <div class="my-7 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4" role="list"
             aria-label="Product grid">
-            @for (product of productsService.allProducts|search: searchKey; track product.id) {
+            @for (product of productsService.allProducts|search: searchKey ;track product.id) {
             <div [routerLink]="['/details' , product.id]"
                 class="product overflow-hidden border-gray-200 border-[.0625rem] p-7 rounded-md cursor-pointer hover:shadow-lg transition-all duration-300"
                 role="listitem" tabindex="0" (keyup.enter)="navigateToDetails(product.id)">
