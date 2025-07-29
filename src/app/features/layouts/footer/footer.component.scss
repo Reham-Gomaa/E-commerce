@@ -1,19 +1,31 @@
 .footer-bg {
-  background-color: var(--footer-color);
-}
+  background-color: var(--surface-color);
 
-.payments {
-  @media all and (48rem <= width <= 55.875rem) {
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: space-between !important;
-    align-items: start !important;
+  .text-color {
+    color: var(--text-secondary);
   }
 
-  @media all and (min-width: 55.875rem) {
-    display: flex !important;
-    flex-direction: row !important;
-    justify-content: space-between !important;
-    align-items: center !important;
+  .payments {
+    @media all and (48rem <= width <= 55.875rem) {
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: space-between !important;
+      align-items: start !important;
+    }
+
+    @media all and (min-width: 55.875rem) {
+      display: flex !important;
+      flex-direction: row !important;
+      justify-content: space-between !important;
+      align-items: center !important;
+    }
+  }
+
+  .btn-bg {
+    background-color: var(--active-color);
+  }
+
+  .border-gray-200 {
+    border-color: var(--border-color) !important;
   }
 }

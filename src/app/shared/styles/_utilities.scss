@@ -14,16 +14,21 @@
 
 body {
   font-family: var(--font-family-1);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+html,
+body,
+.nav-bg,
+.footer-bg {
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 .mycontainer {
-  @apply w-[95%] sm:w-[90%] lg:w-[85%] mx-auto;
+  @apply w-[90%] lg:w-[85%] mx-auto;
 }
 .active-text {
   color: var(--active-color);
 }
 .btn-text {
-  color: var(--btn-color);
-}
-.btn-bg {
-  background-color: var(--btn-color);
+  color: var(--link-active-color);
 }

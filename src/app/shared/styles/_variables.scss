@@ -1,9 +1,28 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
+  // Font
   --font-family-1: "Roboto", sans-serif;
-  --active-color: #ff6200;
-  --btn-color: #ffce12;
-  --nav-color: #131921;
-  --footer-color: #131a22;
+
+  /* Light mode */
+  --bg-color: #ffffff;
+  --surface-color: #f8f8f8;
+  --text-color: #131921;
+  --text-secondary: #555555;
+  --active-color: #f8ab38;
+  --link-active-color: #ffce12;
+  --border-color: #e5e7eb;
+
+  // --active-color: #f8ab38;
+  // --dark-color: #131921;
+  // --link-active-color: #ffce12;
+}
+
+.dark {
+  /* Dark mode */
+  --bg-color: #0d1117;
+  --surface-color: #161b22;
+  --text-color: #f5f5f5;
+  --text-secondary: #c9d1d9;
+  --border-color: #30363d;
 }

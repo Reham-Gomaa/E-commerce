@@ -1,3 +1,12 @@
 .nav-bg {
-  background-color: var(--nav-color);
+  background-color: var(--surface-color);
+}
+
+a {
+  color: var(--text-color);
+}
+
+a.btn-text,
+a.router-link-active {
+  color: var(--link-active-color);
 }
