@@ -9,11 +9,11 @@
                 <img class="object-contain h-[200px] mx-auto" [src]="product.image"
                     [alt]="product.title + ' product image'" loading="lazy" width="400" height="400" itemprop="url">
             </div>
-            <div class="w-full md:w-[50%] lg:w-2/3">
+            <div class="w-full md:w-[50%] lg:w-2/3 ps-4">
                 <div class="mt-4">
                     <h1 class="font-black" itemprop="name">{{product.title}}</h1>
                     <h2 class="text-lg" itemprop="category">{{product.category}}</h2>
-                    <p class="mt-2 text-gray-700" itemprop="description">{{product.description}}</p>
+                    <p class="mt-2 text-[var(--text-secondary)]" itemprop="description">{{product.description}}</p>
                     <h3 class="mt-2" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
                         <span itemprop="priceCurrency" content="EGP"></span>
                         <span itemprop="price">{{product.price | currency : 'EGP'}}</span>
