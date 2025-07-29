@@ -9,6 +9,7 @@ import { ProductsService } from '../../../core/services/products/products.servic
 import { ProductsCarouselComponent } from '../../../shared/components/UI/products-carousel/products-carousel.component';
 import { SearchPipe } from '../../../shared/pipes/search.pipe';
 import { SearchByNameComponent } from '../../../shared/components/business/search-by-name/search-by-name.component';
+import { finalize } from 'rxjs';
 
 @Component({
   selector: 'app-products',
