@@ -99,4 +99,4 @@ src/
 
 ### 🚀 Live Demo
 
-[![Vercel](https://img.shields.io/badge/Vercel-Live_Demo-000000?logo=vercel&logoColor=white)](https://e-commerce-git-main-rehams-projects-bc209b3e.vercel.app)
+[![Vercel]](https://e-commerce-ten-sigma-28.vercel.app/#/home)
