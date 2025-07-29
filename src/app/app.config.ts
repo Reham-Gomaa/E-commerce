@@ -24,13 +24,17 @@ import {
 import { provideToastr } from 'ngx-toastr';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { loadingInterceptor } from './core/interceptors/loading.interceptor';
+import { errorInterceptor } from './core/interceptors/error.interceptor';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes, withViewTransitions(), withHashLocation()),
     provideClientHydration(withEventReplay()),
-    provideHttpClient(withFetch(), withInterceptors([loadingInterceptor])),
+    provideHttpClient(
+      withFetch(),
+      withInterceptors([loadingInterceptor, errorInterceptor])
+    ),
     importProvidersFrom(BrowserAnimationsModule, NgxSpinnerModule),
     provideToastr({ tapToDismiss: true, timeOut: 2000 }),
   ],
