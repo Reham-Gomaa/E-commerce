@@ -8,8 +8,14 @@ import { Component, EventEmitter, Output } from '@angular/core';
 })
 export class SortComponent {
   @Output() sortChange = new EventEmitter<string>();
+  isDropdownOpen = false;
+
+  toggleDropdown() {
+    this.isDropdownOpen = !this.isDropdownOpen;
+  }
 
   applySort(sortType: string) {
     this.sortChange.emit(sortType);
+    this.isDropdownOpen = false; // Close dropdown after selection
   }
 }

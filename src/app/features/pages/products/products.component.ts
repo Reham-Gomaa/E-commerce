@@ -33,7 +33,7 @@ export class ProductsComponent implements OnInit {
   readonly productsService = inject(ProductsService);
 
   searchKey: string = '';
-  currentSort: string = '';
+  currentSort: string = 'name-asc';
 
   ngOnInit(): void {
     this.getAllProducts();
