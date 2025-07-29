@@ -40,7 +40,6 @@ export class ProductsComponent implements OnInit {
       .pipe(takeUntilDestroyed(this.destroyRef))
       .subscribe({
         next: (res) => {
-          console.log(res);
           this.productsService.allProducts = res;
         },
       });
