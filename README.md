@@ -2,11 +2,24 @@
 
 ---
 
+## 📝 Project Overview
+
+**Products Gallery** is a modern e-commerce SPA built with Angular, featuring:
+
+- **Real-world shopping experience** with product browsing, search, and cart functionality
+- **Optimized performance** through lazy loading and efficient state management
+- **Clean UI** built with Tailwind CSS for full responsiveness
+- **Modular architecture** using Angular's standalone components
+- **Robust API integration** with error handling and loading states
+
+Key user flows:
+
+1. Browse products with search/sort filters
+2. View product details with images and ratings
+
 ## 🌟 Features
 
 - **Product Catalog** with categories and search
-- **Shopping Cart** functionality
-- **User Authentication** (Login/Register)
 - **Responsive Design** for all devices
 - **Product Details** with ratings and descriptions
 - **Sorting & Filtering** options
@@ -66,6 +79,8 @@ src/
 |------------|----------|
 | ![Angular] | Core framework |
 | ![Tailwind CSS] | Utility-first styling |
+| ![Flowbite] | UI components & dropdowns |
+| ![Owl Carousel] | Product carousels |
 | ![RxJS] | State management |
 | ![NgxToastr] | Notifications |
 
@@ -75,3 +90,13 @@ src/
 | ![FakeStoreAPI] | Product data |
 | ![Angular HTTP] | API communication |
 ```
+
+### Development Tools
+
+| Technology | Use Case                            |
+| ---------- | ----------------------------------- |
+| ![git-cz]  | Commitizen for standardized commits |
+
+### 🚀 Live Demo
+
+[![Vercel](https://img.shields.io/badge/Vercel-Live_Demo-000000?logo=vercel&logoColor=white)](https://e-commerce-git-main-rehams-projects-bc209b3e.vercel.app)
