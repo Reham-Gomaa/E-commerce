@@ -1,1 +1,41 @@
-<p>products works!</p>
+@if (productsService.allProducts!= null) {
+<section class="p-4 my-7" aria-label="Products listing">
+    <div class="mycontainer">
+        <app-search-by-name (key)="searchKey = $event" />
+
+        <div class="my-14" aria-label="Featured products">
+            <app-products-carousel />
+        </div>
+
+        <div class="my-7 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4" role="list"
+            aria-label="Product grid">
+            @for (product of productsService.allProducts|search: searchKey; track product.id) {
+            <div [routerLink]="['/details' , product.id]"
+                class="product overflow-hidden border-gray-200 border-[.0625rem] p-7 rounded-md cursor-pointer hover:shadow-lg transition-all duration-300"
+                role="listitem" tabindex="0" (keyup.enter)="navigateToDetails(product.id)">
+                <div class="mt-4">
+                    <img class="object-contain h-[200px] mx-auto" [src]="product.image"
+                        [alt]="product.title + ' product image'" loading="lazy" width="200" height="200">
+                </div>
+                <div class="mt-4">
+                    <h2 class="font-black">{{product.title.split(' ').slice(0,3).join(' ')}}</h2>
+                    <p class="mt-2">{{product.description.split(' ').slice(0,10).join(' ')}}</p>
+                </div>
+                <div class="flex justify-between mt-4">
+                    <h3>{{product.price | currency : 'EGP'}}</h3>
+                    <span title="Rating: {{product.rating.rate}} out of 5">
+                        <i class="fa-solid fa-star active-text" aria-hidden="true"></i>{{product.rating.rate}}
+                    </span>
+                </div>
+                <div class="btn mt-4">
+                    <button class="rounded-full px-3 py-1 block mx-auto"
+                        title="Add {{product.title.split(' ').slice(0,3).join(' ')}} to cart">
+                        Add to cart
+                    </button>
+                </div>
+            </div>
+            }
+        </div>
+    </div>
+</section>
+}
